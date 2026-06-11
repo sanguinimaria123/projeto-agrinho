@@ -41,6 +41,19 @@ function simular() {
   calcularRanking();
 }
 
+function reiniciar() {
+  pontos = 50;
+  historico = [];
+
+  document.getElementById("nivel").style.width = "50%";
+  document.getElementById("resultado").innerHTML = "";
+  document.getElementById("ranking").innerHTML = "";
+
+  let canvas = document.getElementById("graficoCanvas");
+  let ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
 // gráfico
 function desenharGrafico() {
   let canvas = document.getElementById("graficoCanvas");

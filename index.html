@@ -1,90 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AgroFuturo PRO</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <h1>🌱 AgroFuturo PRO</h1>
+  <header>
+    <h1>🌱 AgroFuturo PRO</h1>
 
-  <nav>
-    <a href="#explicacao">Produção</a>
-    <a href="#simulador">Simulador</a>
-    <a href="#grafico">Dados</a>
-    <a href="#resultadoFinal">Resultado</a>
-  </nav>
+    <nav>
+      <a href="#explicacao">Produção</a>
+      <a href="#simulador">Simulador</a>
+      <a href="#grafico">Dados</a>
+      <a href="#resultadoFinal">Resultado</a>
+    </nav>
 
-  <button class="btn-dark" onclick="toggleDarkMode()">🌙</button>
-</header>
+    <button class="btn-dark" onclick="toggleDarkMode()">🌙</button>
+  </header>
 
-<section class="hero">
-  <h2>Você decide o futuro do agro</h2>
-  <p id="boasVindas"></p>
-</section>
+  <section class="hero">
+    <h2>Você decide o futuro do agro</h2>
+    <p id="boasVindas"></p>
+  </section>
 
-<section id="explicacao">
-  <h2>🌾 Tipos de Produção</h2>
+  <section id="explicacao">
+    <h2>🌾 Tipos de Produção</h2>
 
-  <div class="cards">
+    <div class="cards">
 
-    <div class="card">
-      <h3>Convencional</h3>
-      <img src="img/convencional.png" alt="Trator jogando agrotóxico na plantação">
-      <p>Alta produtividade, porém com maior impacto ambiental.</p>
+      <div class="card">
+        <h3>Convencional</h3>
+        <img src="img/convencional.png" alt="Trator jogando agrotóxico na plantação">
+        <p>Alta produtividade, porém com maior impacto ambiental.</p>
+      </div>
+
+      <div class="card">
+        <h3>Orgânica</h3>
+        <img src="img/organica.png" alt="Alfaces e colves em produção orgânica">
+        <p>Produção sustentável com menor impacto ambiental.</p>
+      </div>
+
+      <div class="card">
+        <h3>Tecnológica</h3>
+        <img src="img/tecnologica.png" alt="Plantação com auxílio de drones, placa solar e rede wifi">
+        <p>Uso de tecnologia para equilibrar produção e sustentabilidade.</p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Orgânica</h3>
-      <img src="img/organica.png" alt="Alfaces e colves em produção orgânica">
-      <p>Produção sustentável com menor impacto ambiental.</p>
+  <section id="simulador">
+    <h2>Simulador</h2>
+    <p class="instrucao">
+      Escolha uma prática e clique em <b>Adicionar decisão</b>.
+      Você pode testar várias decisões para ver como elas afetam a sustentabilidade ao longo do tempo.
+    </p>
+    <select id="pratica">
+      <option value="convencional">Convencional</option>
+      <option value="organica">Orgânica</option>
+      <option value="tecnologica">Tecnológica</option>
+    </select>
+
+    <button onclick="simular()">Adicionar decisão</button>
+    <button onclick="reiniciar()" class="reset">Reiniciar simulação</button>
+    <div id="resultado"></div>
+
+    <h3>🌿 Sustentabilidade</h3>
+    <div class="barra">
+      <div id="nivel"></div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Tecnológica</h3>
-      <img src="img/tecnologica.png" alt="Plantação com auxílio de drones, placa solar e rede wifi">
-      <p>Uso de tecnologia para equilibrar produção e sustentabilidade.</p>
-    </div>
+  <section id="grafico">
+    <h2>📊 Evolução</h2>
+    <canvas id="graficoCanvas" width="500" height="250"></canvas>
+  </section>
 
-  </div>
-</section>
+  <section id="resultadoFinal">
+    <h2>🏆 Resultado Final</h2>
+    <p id="ranking"></p>
+  </section>
 
-<section id="simulador">
-  <h2>Simulador</h2>
+  <footer align=center>
+    <p>Projeto Agrinho 2026 - Maria Eduarda Sanguini </p>
+  </footer>
 
-  <select id="pratica">
-    <option value="convencional">Convencional</option>
-    <option value="organica">Orgânica</option>
-    <option value="tecnologica">Tecnológica</option>
-  </select>
-
-  <button onclick="simular()">Aplicar decisão</button>
-
-  <div id="resultado"></div>
-
-  <h3>🌿 Sustentabilidade</h3>
-  <div class="barra">
-    <div id="nivel"></div>
-  </div>
-</section>
-
-<section id="grafico">
-  <h2>📊 Evolução</h2>
-  <canvas id="graficoCanvas" width="500" height="250"></canvas>
-</section>
-
-<section id="resultadoFinal">
-  <h2>🏆 Resultado Final</h2>
-  <p id="ranking"></p>
-</section>
-
-<footer align = center>
-  <p>Projeto Agrinho 2026 - Maria Eduarda Sanguini </p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
