@@ -32,34 +32,33 @@
     <h2>🌾 Tipos de Produção</h2>
 
     <div class="cards">
-
       <div class="card">
         <h3>Convencional</h3>
-        <img src="img/convencional.png" alt="Trator jogando agrotóxico na plantação">
+        <img src="img/convencional.png" alt="Trador borrifando agrotóxico na lavoura">
         <p>Alta produtividade, porém com maior impacto ambiental.</p>
       </div>
 
       <div class="card">
         <h3>Orgânica</h3>
-        <img src="img/organica.png" alt="Alfaces e colves em produção orgânica">
+        <img src="img/organica.png" alt="Orta de alface e couve cultivo orgânico">
         <p>Produção sustentável com menor impacto ambiental.</p>
       </div>
 
       <div class="card">
         <h3>Tecnológica</h3>
-        <img src="img/tecnologica.png" alt="Plantação com auxílio de drones, placa solar e rede wifi">
+        <img src="img/tecnologica.png" alt="Drones e placas solares para auxílio da lavoura">
         <p>Uso de tecnologia para equilibrar produção e sustentabilidade.</p>
       </div>
-
     </div>
   </section>
 
   <section id="simulador">
     <h2>Simulador</h2>
+
     <p class="instrucao">
       Escolha uma prática e clique em <b>Adicionar decisão</b>.
-      Você pode testar várias decisões para ver como elas afetam a sustentabilidade ao longo do tempo.
     </p>
+
     <select id="pratica">
       <option value="convencional">Convencional</option>
       <option value="organica">Orgânica</option>
@@ -67,7 +66,8 @@
     </select>
 
     <button onclick="simular()">Adicionar decisão</button>
-    <button onclick="reiniciar()" class="reset">Reiniciar simulação</button>
+    <button onclick="reiniciar()" class="reset">Reiniciar</button>
+
     <div id="resultado"></div>
 
     <h3>🌿 Sustentabilidade</h3>
@@ -86,11 +86,10 @@
     <p id="ranking"></p>
   </section>
 
-  <footer align=center>
-    <p>Projeto Agrinho 2026 - Maria Eduarda Sanguini </p>
+  <footer>
+    <p>Projeto Agrinho 2026 - Maria Eduarda Sanguini</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>

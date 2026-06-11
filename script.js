@@ -19,6 +19,7 @@ function simular() {
   let resultado = document.getElementById("resultado");
   let barra = document.getElementById("nivel");
 
+  resultado.innerHTML += "<br>➡️ Decisão adicionada!";
   if (pratica === "convencional") {
     pontos -= 10;
     resultado.innerHTML = "🚜 Alta produção, alto impacto";

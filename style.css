@@ -4,7 +4,7 @@
   --verde-escuro: #1b5e20;
 }
 
-/* Base */
+/* base */
 body {
   margin: 0;
   font-family: Arial;
@@ -12,7 +12,7 @@ body {
   padding-top: 90px;
 }
 
-/* Header com degradê */
+/* header */
 header {
   position: fixed;
   top: 0;
@@ -23,15 +23,12 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 15px 30px;
-  box-sizing: border-box;
 }
 
-/* botão afastado */
 .btn-dark {
   margin-left: 20px;
 }
 
-/* nav central */
 nav {
   flex: 1;
   text-align: center;
@@ -43,37 +40,21 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover {
-  border-bottom: 2px solid #fff;
-}
-
-/* hero com degradê */
+/* hero */
 .hero {
   text-align: center;
   padding: 100px 20px;
   background: linear-gradient(135deg, var(--verde-claro), var(--verde-medio));
 }
 
-/* seções alternadas */
-section:nth-child(even) {
-  background: #f1f8f4;
-}
-
-section:nth-child(odd) {
-  background: #ffffff;
-}
-
-/* animação */
+/* sections */
 section {
   padding: 40px;
-  opacity: 0;
-  transform: translateY(20px);
   transition: 0.5s;
 }
 
-.section-ativa {
-  opacity: 1;
-  transform: translateY(0);
+section:nth-child(even) {
+  background: #f1f8f4;
 }
 
 /* cards */
@@ -97,22 +78,26 @@ section {
   height: 150px;
   object-fit: cover;
   background: #ddd;
-  border-radius: 8px;
 }
 
-/* botões com degradê */
+/* botões */
 button {
   padding: 10px;
-  cursor: pointer;
   background: linear-gradient(45deg, var(--verde-medio), var(--verde-escuro));
   color: white;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-button:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
+.reset {
+  background: linear-gradient(45deg, #777, #333);
+}
+
+/* select */
+select {
+  padding: 10px;
+  margin: 10px 0;
 }
 
 /* barra */
@@ -124,32 +109,69 @@ button:hover {
 
 #nivel {
   height: 100%;
-  width: 50%;
   background: linear-gradient(to right, #81c784, #2e7d32);
-  transition: 0.5s;
 }
 
-/* ranking */
-#ranking {
-  font-size: 20px;
-  font-weight: bold;
+/* footer */
+footer {
   text-align: center;
+  padding: 20px;
+  background: #eee;
 }
 
-/* dark mode */
+/* ===================== */
+/* 🌙 DARK MODE COMPLETO */
+/* ===================== */
+
 .dark-mode {
   background: #121212;
   color: white;
 }
 
+/* header */
 .dark-mode header {
   background: linear-gradient(90deg, #0d1f0f, #1b5e20);
 }
 
+/* sections */
+.dark-mode section {
+  background: #181818;
+}
+
+/* hero */
 .dark-mode .hero {
   background: linear-gradient(135deg, #1b5e20, #0d1f0f);
 }
 
+/* cards */
 .dark-mode .card {
-  background: #2a2a2a;
+  background: #222;
+  color: white;
+}
+
+/* select */
+.dark-mode select {
+  background: #222;
+  color: white;
+  border: 1px solid #555;
+}
+
+.dark-mode option {
+  background: #222;
+  color: white;
+}
+
+/* botões */
+.dark-mode button {
+  background: linear-gradient(45deg, #2e7d32, #1b5e20);
+}
+
+/* barra */
+.dark-mode .barra {
+  background: #333;
+}
+
+/* footer */
+.dark-mode footer {
+  background: #1a1a1a;
 }
