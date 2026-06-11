@@ -118,3 +118,7 @@ function calcularRanking() {
     rel.innerHTML = "Precisa melhorar.";
   }
 }
+
+function voltar() {
+  window.history.back();
+}

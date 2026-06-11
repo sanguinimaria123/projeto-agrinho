@@ -127,3 +127,63 @@ footer {
 .dark-mode canvas {
   background: #1e1e1e;
 }
+
+/* estilo da página convencional*/
+
+.pagina-detalhe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px;
+}
+
+/* Caixa elegante do conteúdo */
+.conteudo-box {
+  max-width: 800px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+
+  /* sombra elegante */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Imagem menor e mais refinada */
+.img-detalhe {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+
+  /* leve sombra na imagem */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Título */
+.conteudo-box h2 {
+  margin-bottom: 15px;
+}
+
+/* Texto mais confortável */
+.conteudo-box p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Botão elegante */
+.conteudo-box button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2e7d32;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.conteudo-box button:hover {
+  background: #1b5e20;
+}
