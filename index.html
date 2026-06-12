@@ -16,6 +16,7 @@
     <a href="#simulador">🎮 Simulador</a>
     <a href="#grafico">📊 Dados</a>
     <a href="#resultadoFinal">🏆 Resultado</a>
+    <a href="#desafio">🧠 Desafio</a>
   </nav>
 
   <button class="btn-dark" onclick="toggleDarkMode()">🌙</button>
@@ -85,6 +86,23 @@
   <h2>Resultado</h2>
   <p id="ranking"></p>
   <p id="relatorio"></p>
+</section>
+
+<section id="desafio">
+    <h2>🧠 Desafio Agro Sustentável</h2>
+    <p>Teste os seus conhecimentos sobre o equilíbrio entre a alta produção agrícola e a preservação do meio ambiente!</p>
+    
+    <div class="conteudo-box" style="margin: 0 auto;">
+        <p id="pergunta"><b>Pergunta:</b> Qual destas práticas agrícolas ajuda a preservar o solo e a reter água sem o uso de químicos nocivos?</p>
+        
+        <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+            <button onclick="verificarResposta(false)">A) Uso intensivo de fertilizantes sintéticos</button>
+            <button onclick="verificarResposta(true)">B) Rotação de culturas e adubação orgânica</button>
+            <button onclick="verificarResposta(false)">C) Monocultura em larga escala sem descanso da terra</button>
+        </div>
+        
+        <p id="resultado-quiz" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></p>
+    </div>
 </section>
 
 <footer>

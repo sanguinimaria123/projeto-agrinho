@@ -119,6 +119,18 @@ function calcularRanking() {
   }
 }
 
+// Função para o Quiz da Nova Secção
+function verificarResposta(correta) {
+    const resultadoElement = document.getElementById("resultado-quiz");
+    if (correta) {
+        resultadoElement.innerText = "🎉 Correto! A rotação de culturas e a adubação natural fortalecem o solo e promovem a biodiversidade.";
+        resultadoElement.style.color = "#2e7d32"; // Verde para acerto
+    } else {
+        resultadoElement.innerText = "❌ Tente novamente! Essa prática pode causar impactos negativos a longo prazo no ecossistema.";
+        resultadoElement.style.color = "#d32f2f"; // Vermelho para erro
+    }
+}
+
 function voltar() {
   window.history.back();
 }
