@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>AgroFuturo PRO</title>
+
+  <!-- aqui estou puxando o arquivo de estilo (CSS) -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,6 +13,8 @@
 <header>
   <h1>🌱 AgroFuturo PRO</h1>
 
+  <!-- menu de navegação do site -->
+  <!-- esses links levam para partes da mesma página -->
   <nav aria-label="Menu principal">
     <a href="#explicacao">🌾 Produção</a>
     <a href="#simulador">🎮 Simulador</a>
@@ -19,6 +23,7 @@
     <a href="#desafio">🧠 Desafio</a>
   </nav>
 
+  <!-- botão que ativa o modo escuro -->
   <button class="btn-dark" onclick="toggleDarkMode()">🌙</button>
 </header>
 
@@ -27,6 +32,7 @@
 
   <div class="cards">
 
+  <!-- cada card é clicável e leva para outra página -->
   <a href="paginas/convencional.html" class="card">
     <img src="img/convencional.png" alt="Trator aplicando agrotóxico em uma plantação de monocultura">
     <h3>Convencional</h3>
@@ -51,10 +57,12 @@
 <section id="simulador">
   <h2>Simulador</h2>
 
+  <!-- instrução para o usuário -->
   <p class="instrucao">
     Escolha uma prática agrícola e clique em <b>Adicionar decisão</b>.
   </p>
 
+  <!-- select = caixinha de seleção -->
   <label for="pratica"><b>Selecione:</b></label>
   <select id="pratica">
     <option value="convencional">Convencional</option>
@@ -64,14 +72,20 @@
 
   <br><br>
 
+  <!-- botão que chama a função simular() -->
   <button onclick="simular()">➕ Adicionar decisão</button>
+
+  <!-- botão para reiniciar tudo -->
   <button onclick="reiniciar()" class="reset">🔄 Reiniciar</button>
 
+  <!-- aqui aparece o resultado das escolhas -->
   <div id="resultado" aria-live="polite">
     Faça sua primeira escolha 🌱
   </div>
 
   <h3>Sustentabilidade</h3>
+
+  <!-- barrinha que mostra o nível -->
   <div class="barra">
     <div id="nivel"></div>
   </div>
@@ -79,28 +93,55 @@
 
 <section id="grafico">
   <h2>Evolução</h2>
+
+  <!-- canvas usado para desenhar o gráfico com JavaScript -->
   <canvas id="graficoCanvas" width="600" height="300"></canvas>
 </section>
 
 <section id="resultadoFinal">
   <h2>Resultado</h2>
+
+  <!-- ranking final -->
   <p id="ranking"></p>
+
+  <!-- explicação do resultado -->
   <p id="relatorio"></p>
 </section>
 
 <section id="desafio">
     <h2>🧠 Desafio Agro Sustentável</h2>
+
+    <!-- pequeno texto explicando o quiz -->
     <p>Teste os seus conhecimentos sobre o equilíbrio entre a alta produção agrícola e a preservação do meio ambiente!</p>
     
+    <!-- caixinha do quiz -->
     <div class="conteudo-box" style="margin: 0 auto;">
-        <p id="pergunta"><b>Pergunta:</b> Qual destas práticas agrícolas ajuda a preservar o solo e a reter água sem o uso de químicos nocivos?</p>
         
+        <!-- pergunta -->
+        <p id="pergunta">
+          <b>Pergunta:</b> Qual destas práticas agrícolas ajuda a preservar o solo e a reter água sem o uso de químicos nocivos?
+        </p>
+        
+        <!-- botões das respostas -->
         <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
-            <button onclick="verificarResposta(false)">A) Uso intensivo de fertilizantes sintéticos</button>
-            <button onclick="verificarResposta(true)">B) Rotação de culturas e adubação orgânica</button>
-            <button onclick="verificarResposta(false)">C) Monocultura em larga escala sem descanso da terra</button>
+            
+            <!-- false = resposta errada -->
+            <button onclick="verificarResposta(false)">
+              A) Uso intensivo de fertilizantes sintéticos
+            </button>
+
+            <!-- true = resposta certa -->
+            <button onclick="verificarResposta(true)">
+              B) Rotação de culturas e adubação orgânica
+            </button>
+
+            <!-- errada também -->
+            <button onclick="verificarResposta(false)">
+              C) Monocultura em larga escala sem descanso da terra
+            </button>
         </div>
         
+        <!-- aqui aparece se acertou ou errou -->
         <p id="resultado-quiz" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></p>
     </div>
 </section>
@@ -112,6 +153,7 @@
   </p>
 </footer>
 
+<!-- aqui estou conectando o JavaScript -->
 <script src="script.js"></script>
 
 </body>
