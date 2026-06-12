@@ -187,3 +187,9 @@ footer {
 .conteudo-box button:hover {
   background: #1b5e20;
 }
+
+.dark-mode .conteudo-box {
+    background: #222222; /* Um cinza escuro elegante */
+    color: white;        /* Garante que o texto fique branco dentro dela */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra mais escura para combinar */
+}
