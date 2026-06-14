@@ -18,6 +18,17 @@ header {
   box-sizing: border-box;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
 .btn-dark {
   position: relative;
   right: 50px;
@@ -195,6 +206,10 @@ footer {
    RESPONSIVIDADE CELULAR
 ========================== */
 @media (max-width: 768px) {
+
+  section {
+  scroll-margin-top: 200px;
+}
 
   body {
     padding-top: 180px;
