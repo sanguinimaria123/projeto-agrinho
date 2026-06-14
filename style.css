@@ -1,6 +1,9 @@
 body {
   margin: 0;
   font-family: Arial;
+
+  /* espaço estrutural para não ficar atrás do header fixo */
+  padding-top: 120px;
 }
 
 /* HEADER FIXO */
@@ -9,10 +12,13 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+
   background: linear-gradient(90deg, #1b5e20, #4caf50);
   color: white;
+
   display: flex;
   justify-content: space-between;
+
   padding: 15px 30px;
   backdrop-filter: blur(6px);
   box-sizing: border-box;
@@ -36,10 +42,12 @@ nav a {
   right: 50px;
 }
 
-/* SCROLL CORRIGIDO (BASE DESKTOP) */
+/* SCROLL DE ÂNCORAS (CORREÇÃO PRINCIPAL) */
 section {
-  padding: 40px;
-  scroll-margin-top: 120px; /* altura aproximada do header desktop */
+  padding: 40px 40px 60px;
+
+  /* evita que o título fique escondido atrás do header */
+  scroll-margin-top: 140px;
 }
 
 /* CARDS */
@@ -54,10 +62,13 @@ section {
 .card {
   text-decoration: none;
   color: inherit;
+
   width: 260px;
   background: white;
+
   border-radius: 12px;
   padding: 15px;
+
   text-align: center;
 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -74,7 +85,7 @@ section {
   box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
-/* FEEDBACK DE TOQUE NO MOBILE */
+/* FEEDBACK TOQUE MOBILE */
 .card:active {
   transform: scale(0.97);
 }
@@ -98,7 +109,7 @@ section {
   font-size: 14px;
 }
 
-/* IMAGEM CARD */
+/* IMAGEM DOS CARDS */
 .card img {
   width: 100%;
   height: 150px;
@@ -192,15 +203,16 @@ footer {
 ========================== */
 @media (max-width: 768px) {
 
+  /* header menor no mobile (corrige altura excessiva) */
   header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 10px 15px; /* reduz altura do header */
+    padding: 10px 15px;
   }
 
   header h1 {
-    font-size: 1.1rem; /* reduz título AgroFuturo PRO */
+    font-size: 1.1rem;
     margin: 0;
   }
 
@@ -225,7 +237,9 @@ footer {
 
   section {
     padding: 25px 15px;
-    scroll-margin-top: 170px; /* ajuste para header maior no mobile */
+
+    /* correção do corte do título no mobile */
+    scroll-margin-top: 180px;
   }
 
   .cards {
