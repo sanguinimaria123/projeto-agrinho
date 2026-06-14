@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- nome que aparece na aba do navegador -->
   <title>Produção Orgânica</title>
 
+  <!-- conecta o arquivo CSS pra estilizar a página -->
   <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
+<!-- topo da página (cabeçalho) -->
 <header>
+
+  <!-- título principal da página -->
   <h1>🌱 Produção Orgânica</h1>
+
+  <!-- botão pra ativar o modo escuro 🌙 -->
   <button class="btn-dark" onclick="toggleDarkMode()">🌙</button>
+
 </header>
 
+<!-- conteúdo principal da página -->
 <main class="pagina-detalhe">
 
+  <!-- caixa que organiza o texto e imagem -->
   <div class="conteudo-box">
 
-    <img src="../img/organica.png" 
+    <!-- imagem representando a produção orgânica -->
+    <img src="../img/organica.png"
          alt="Horta com cultivo orgânico de alface e couve"
          class="img-detalhe">
 
+    <!-- título explicando o tema -->
     <h2>O que é a produção orgânica?</h2>
 
+    <!-- primeiro parágrafo explicando o conceito -->
     <p>
       A produção orgânica é um modelo agrícola que respeita os ciclos naturais
       da terra, priorizando o equilíbrio entre o solo, a água, os seres vivos e o ser humano.
@@ -32,6 +47,7 @@
       geneticamente modificados.
     </p>
 
+    <!-- explicação das práticas usadas -->
     <p>
       Em vez disso, são adotadas práticas sustentáveis como a rotação de culturas,
       adubação natural, compostagem e controle biológico de pragas. Essas técnicas
@@ -39,6 +55,7 @@
       e resiliente.
     </p>
 
+    <!-- benefícios da produção orgânica -->
     <p>
       Além dos benefícios ambientais, a produção orgânica também contribui para a saúde
       humana, oferecendo alimentos mais naturais e livres de resíduos químicos.
@@ -46,23 +63,30 @@
       o campo e a cidade.
     </p>
 
+    <!-- conclusão -->
     <p>
       Escolher a produção orgânica é investir em um futuro sustentável, onde produzir
       alimentos não significa esgotar recursos, mas sim cuidar da terra que nos sustenta.
     </p>
 
-    <p><b>💡 Você sabia?</b> Um solo saudável pode armazenar mais carbono e ajudar no combate às mudanças climáticas.</p>
+    <!-- curiosidade final -->
+    <p>
+      <b>💡 Você sabia?</b> Um solo saudável pode armazenar mais carbono e ajudar no combate às mudanças climáticas.
+    </p>
 
+    <!-- botão para voltar para a página anterior -->
     <button onclick="voltar()">⬅ Voltar</button>
 
   </div>
 
 </main>
 
+<!-- rodapé da página -->
 <footer>
-  <p>• Concurso Agrinho 2026 • Desenvolvido por Maria Eduarda Sanguini </p>
+  <p>• Concurso Agrinho 2026 • Desenvolvido por Maria Eduarda Sanguini</p>
 </footer>
 
+<!-- conecta o JavaScript com funções da página -->
 <script src="../script.js"></script>
 
 </body>

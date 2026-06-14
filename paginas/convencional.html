@@ -4,65 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- aqui é o nome que aparece na aba do navegador -->
     <title>Produção Convencional</title>
 
+    <!-- aqui eu conecto o arquivo de estilo pra deixar a página bonitinha -->
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
+    <!-- esse é o topo da página, tipo o cabeçalho -->
     <header>
+
+        <!-- título da página -->
         <h1>🌾 Produção Convencional</h1>
+
+        <!-- botão pra ativar o modo escuro 🌙 -->
         <button class="btn-dark" onclick="toggleDarkMode()">🌙</button>
+
     </header>
 
+    <!-- aqui começa o conteúdo principal da página -->
     <main class="pagina-detalhe">
 
+        <!-- caixa que organiza o texto e a imagem -->
         <div class="conteudo-box">
 
-            <img src="../img/convencional.png" alt="Trator aplicando agrotóxico em uma plantação de monocultura"
-                class="img-detalhe">
+            <!-- imagem explicando o tema -->
+            <img src="../img/convencional.png" 
+                 alt="Trator aplicando agrotóxico em uma plantação de monocultura"
+                 class="img-detalhe">
 
+            <!-- título principal do conteúdo -->
             <h2>O que é a produção convencional?</h2>
 
+            <!-- parágrafo explicando o tema -->
             <p>
                 A produção convencional é um modelo agrícola amplamente utilizado no mundo,
                 caracterizado pelo uso de máquinas, fertilizantes químicos e defensivos agrícolas
                 para aumentar a produtividade das lavouras.
             </p>
 
+            <!-- mais explicação -->
             <p>
                 Esse tipo de produção permite o cultivo em larga escala, garantindo o abastecimento
                 de alimentos para a população. No entanto, o uso intensivo desses recursos pode gerar
                 impactos ambientais, como a contaminação do solo, da água e a redução da biodiversidade.
             </p>
 
+            <!-- evolução do tema -->
             <p>
                 Atualmente, muitas práticas convencionais vêm sendo adaptadas para se tornarem mais
                 sustentáveis, buscando reduzir impactos e melhorar a eficiência no uso dos recursos naturais.
             </p>
 
+            <!-- conclusão -->
             <p>
                 O desafio está em encontrar um equilíbrio entre alta produção e preservação ambiental,
                 garantindo um futuro sustentável para as próximas gerações.
             </p>
 
+            <!-- curiosidade -->
             <p>
-                <b>💡 Você sabia?</b> O uso intensivo de defensivos agrícolas pode afetar o solo e a água, por isso novas práticas vêm sendo desenvolvidas para tornar a produção mais sustentável.
+                <b>💡 Você sabia?</b> O uso intensivo de defensivos agrícolas pode afetar o solo e a água, 
+                por isso novas práticas vêm sendo desenvolvidas para tornar a produção mais sustentável.
             </p>
 
+            <!-- botão pra voltar pra página anterior -->
             <button onclick="voltar()">⬅ Voltar</button>
 
         </div>
 
     </main>
 
+    <!-- rodapé da página -->
     <footer>
         <p> • Concurso Agrinho 2026 • Desenvolvido por Maria Eduarda Sanguini</p>
     </footer>
 
+    <!-- aqui conecta o JavaScript que faz as funções da página funcionarem -->
     <script src="../script.js"></script>
 
 </body>
-
 </html>
