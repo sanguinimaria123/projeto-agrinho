@@ -15,6 +15,7 @@ header {
   justify-content: space-between;
   padding: 15px 30px; 
   backdrop-filter: blur(6px);
+  box-sizing: border-box;
 }
 
 .btn-dark {
@@ -90,6 +91,7 @@ button {
 canvas {
   background: #fafafa;
   border: 1px solid #ccc;
+  max-width: 100%;
 }
 
 body {
