@@ -36,10 +36,10 @@ nav a {
   right: 50px;
 }
 
-/* SEÇÕES (CORREÇÃO PRINCIPAL DO BUG DE SCROLL) */
+/* SCROLL CORRIGIDO (BASE DESKTOP) */
 section {
   padding: 40px;
-  scroll-margin-top: 140px; /* desktop padrão */
+  scroll-margin-top: 120px; /* altura aproximada do header desktop */
 }
 
 /* CARDS */
@@ -79,7 +79,7 @@ section {
   transform: scale(0.97);
 }
 
-/* ÍCONE INDICANDO CLICÁVEL */
+/* ÍCONE INDICANDO QUE É CLICÁVEL */
 .card::after {
   content: "›";
   position: absolute;
@@ -98,7 +98,7 @@ section {
   font-size: 14px;
 }
 
-/* IMAGEM DO CARD */
+/* IMAGEM CARD */
 .card img {
   width: 100%;
   height: 150px;
@@ -196,21 +196,26 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 15px;
+    padding: 10px 15px; /* reduz altura do header */
+  }
+
+  header h1 {
+    font-size: 1.1rem; /* reduz título AgroFuturo PRO */
+    margin: 0;
   }
 
   nav {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
     margin-top: 10px;
   }
 
   nav a {
     background: rgba(255,255,255,0.15);
-    padding: 8px 12px;
+    padding: 6px 10px;
     border-radius: 20px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .btn-dark {
@@ -220,7 +225,7 @@ footer {
 
   section {
     padding: 25px 15px;
-    scroll-margin-top: 200px; /* 🔥 CORREÇÃO DO BUG NO MOBILE */
+    scroll-margin-top: 170px; /* ajuste para header maior no mobile */
   }
 
   .cards {
