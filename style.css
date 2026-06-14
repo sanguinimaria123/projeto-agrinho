@@ -36,15 +36,10 @@ nav a {
   right: 50px;
 }
 
-/* SCROLL SUAVE E CORRETO (SOLUÇÃO DEFINITIVA) */
-html {
-  scroll-padding-top: 120px;
-  scroll-behavior: smooth;
-}
-
-/* SEÇÕES */
+/* SEÇÕES (CORREÇÃO PRINCIPAL DO BUG DE SCROLL) */
 section {
   padding: 40px;
+  scroll-margin-top: 140px; /* desktop padrão */
 }
 
 /* CARDS */
@@ -55,7 +50,7 @@ section {
   justify-content: center;
 }
 
-/* CARD MELHORADO (UX MOBILE) */
+/* CARD MELHORADO (UX MOBILE + DESKTOP) */
 .card {
   text-decoration: none;
   color: inherit;
@@ -66,8 +61,8 @@ section {
   text-align: center;
 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-
   cursor: pointer;
+
   border: 1px solid rgba(0,0,0,0.06);
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 
@@ -79,12 +74,12 @@ section {
   box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
-/* FEEDBACK DE TOQUE MOBILE */
+/* FEEDBACK DE TOQUE NO MOBILE */
 .card:active {
   transform: scale(0.97);
 }
 
-/* ÍCONE INDICANDO CLIQUE */
+/* ÍCONE INDICANDO CLICÁVEL */
 .card::after {
   content: "›";
   position: absolute;
@@ -94,7 +89,7 @@ section {
   opacity: 0.5;
 }
 
-/* TEXTO “VER MAIS” */
+/* TEXTO "VER MAIS" */
 .card-cta {
   display: inline-block;
   margin-top: 10px;
@@ -103,7 +98,7 @@ section {
   font-size: 14px;
 }
 
-/* IMAGEM CARD */
+/* IMAGEM DO CARD */
 .card img {
   width: 100%;
   height: 150px;
@@ -192,7 +187,9 @@ footer {
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* RESPONSIVO */
+/* ==========================
+   RESPONSIVIDADE CELULAR
+========================== */
 @media (max-width: 768px) {
 
   header {
@@ -223,6 +220,7 @@ footer {
 
   section {
     padding: 25px 15px;
+    scroll-margin-top: 200px; /* 🔥 CORREÇÃO DO BUG NO MOBILE */
   }
 
   .cards {
