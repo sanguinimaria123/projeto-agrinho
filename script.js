@@ -1,17 +1,17 @@
-// 🌱 pontos começam no meio porque é tipo um equilíbrio inicial do jogo
+//  pontos começam no meio porque é tipo um equilíbrio inicial do jogo
 let pontos = 50;
 
-// 📊 aqui eu guardo o histórico pra desenhar o gráfico depois
+//  aqui eu guardo o histórico pra desenhar o gráfico depois
 let historico = [];
 
 
-// 🌙 função simples pra ativar/desativar o modo escuro
+//  função simples pra ativar/desativar o modo escuro
 function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
 }
 
 
-// 🎮 função principal do simulador
+//  função principal do simulador
 function simular() {
   // pego o valor que o usuário escolheu no select
   let pratica = document.getElementById("pratica").value;
@@ -19,40 +19,40 @@ function simular() {
   // aqui vou mostrar o resultado na tela
   let resultado = document.getElementById("resultado");
 
-  // 🚜 se for convencional, perde pontos porque impacta mais o meio ambiente
+  //  se for convencional, perde pontos porque impacta mais o meio ambiente
   if (pratica === "convencional") {
     pontos -= 10;
     resultado.innerHTML = "🚜 Alto impacto ambiental";
 
-  // 🌿 se for orgânica, ganha pontos porque é mais sustentável
+  //  se for orgânica, ganha pontos porque é mais sustentável
   } else if (pratica === "organica") {
     pontos += 10;
     resultado.innerHTML = "🌿 Sustentável";
 
-  // 🤖 tecnologia fica no meio termo, nem tão ruim nem perfeito
+  //  tecnologia fica no meio termo, nem tão ruim nem perfeito
   } else {
     pontos += 5;
     resultado.innerHTML = "🤖 Equilibrado";
   }
 
-  // 🔒 garante que os pontos nunca passem de 0 a 100
+  //  garante que os pontos nunca passem de 0 a 100
   pontos = Math.max(0, Math.min(100, pontos));
 
-  // 📈 salva o valor atual no histórico pro gráfico
+  //  salva o valor atual no histórico pro gráfico
   historico.push(pontos);
 
-  // 📊 atualiza a barrinha de sustentabilidade
+  //  atualiza a barrinha de sustentabilidade
   document.getElementById("nivel").style.width = pontos + "%";
 
-  // 🎨 redesenha o gráfico com os novos dados
+  //  redesenha o gráfico com os novos dados
   desenharGrafico();
 
-  // 🏆 atualiza o ranking final
+  //  atualiza o ranking final
   calcularRanking();
 }
 
 
-// 🔄 função pra resetar tudo e começar de novo
+//  função pra resetar tudo e começar de novo
 function reiniciar() {
   pontos = 50;
   historico = [];
@@ -72,7 +72,7 @@ function reiniciar() {
 }
 
 
-// 📊 função que desenha o gráfico no canvas
+//  função que desenha o gráfico no canvas
 function desenharGrafico() {
   let canvas = document.getElementById("graficoCanvas");
   let ctx = canvas.getContext("2d");
@@ -83,7 +83,7 @@ function desenharGrafico() {
   // limpa o gráfico antigo antes de desenhar outro
   ctx.clearRect(0, 0, w, h);
 
-  // 📏 desenha a grade de fundo (tipo linhas de referência)
+  //  desenha a grade de fundo (tipo linhas de referência)
   ctx.strokeStyle = "#ddd";
   ctx.lineWidth = 1;
 
@@ -125,7 +125,7 @@ function desenharGrafico() {
 
     ctx.stroke(); // desenha a linha completa
 
-    // 🔵 desenha os pontinhos por cima da linha
+    //  desenha os pontinhos por cima da linha
     for (let i = 0; i < historico.length; i++) {
       let x = (i + 1) * espacamento;
       let y = h - historico[i] * (h / 100);
@@ -139,22 +139,22 @@ function desenharGrafico() {
 }
 
 
-// 🏆 função que calcula o resultado final do jogador
+//  função que calcula o resultado final do jogador
 function calcularRanking() {
   let r = document.getElementById("ranking");
   let rel = document.getElementById("relatorio");
 
-  // 🌱 muito sustentável
+  //  muito sustentável
   if (pontos >= 80) {
     r.innerHTML = "🏆 Sustentável";
     rel.innerHTML = "Ótimas escolhas!";
 
-  // 👍 equilibrado
+  //  equilibrado
   } else if (pontos >= 50) {
     r.innerHTML = "👍 Equilibrado";
     rel.innerHTML = "Bom caminho.";
 
-  // ⚠️ impacto alto
+  //  impacto alto
   } else {
     r.innerHTML = "⚠️ Impacto alto";
     rel.innerHTML = "Precisa melhorar.";
@@ -162,7 +162,7 @@ function calcularRanking() {
 }
 
 
-// 🎯 quiz da última seção do site
+//  quiz da última seção do site
 function verificarResposta(correta) {
   const resultadoElement = document.getElementById("resultado-quiz");
 
