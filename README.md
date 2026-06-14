@@ -79,6 +79,10 @@ Ele mostra a evolução da sustentabilidade ao longo do tempo, ajudando a entend
 
 Ao final, o site apresenta um resultado baseado nas decisões tomadas, incentivando a reflexão sobre práticas mais sustentáveis.
 
+Quiz
+
+Um pequeno quiz foi adicionado para ampliar ainda mais os conhecimentos do usuário sobre a sustentabilidade do solo.
+
 🌙 Botão de contraste (modo escuro)
 
 O site possui um botão de modo escuro 🌙.

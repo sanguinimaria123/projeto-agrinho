@@ -193,3 +193,82 @@ footer {
     color: white;        /* Garante que o texto fique branco dentro dela */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra mais escura para combinar */
 }
+
+/* ==========================
+   RESPONSIVIDADE CELULAR
+========================== */
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 120px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 6px;
+    font-size: 14px;
+  }
+
+  .btn-dark {
+    position: static;
+    margin-top: 10px;
+  }
+
+  section {
+    padding: 25px 15px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .pagina-detalhe {
+    padding: 110px 15px 40px;
+  }
+
+  .conteudo-box {
+    padding: 20px;
+  }
+
+  .conteudo-box p {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .img-detalhe {
+    max-width: 100%;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+}
