@@ -8,9 +8,10 @@
   <!-- aqui estou puxando o arquivo de estilo (CSS) -->
   <link rel="stylesheet" href="style.css">
 </head>
-<main>
 
 <body>
+
+<main>
 
 <header>
   <h1>🌱 AgroFuturo PRO</h1>
@@ -39,21 +40,30 @@
     <img src="img/convencional.png" alt="Trator aplicando agrotóxico em uma plantação de monocultura">
     <h3>Convencional</h3>
     <p>Alta produtividade, porém com maior impacto ambiental.</p>
+
+    <!-- indicador de clique (novo) -->
+    <span class="card-cta">Ver mais →</span>
   </a>
 
   <a href="paginas/organica.html" class="card">
     <img src="img/organica.png" alt="Horta com cultivo orgânico de alface e couve">
     <h3>Orgânica</h3>
     <p>Produção sustentável com menor impacto ambiental.</p>
+
+    <!-- indicador de clique (novo) -->
+    <span class="card-cta">Ver mais →</span>
   </a>
 
   <a href="paginas/tecnologica.html" class="card">
     <img src="img/tecnologica.png" alt="Uso de drones e painéis solares no monitoramento da lavoura">
     <h3>Tecnológica</h3>
     <p>Uso de tecnologia para equilibrar produção e sustentabilidade.</p>
+
+    <!-- indicador de clique (novo) -->
+    <span class="card-cta">Ver mais →</span>
   </a>
 
-</div>
+  </div>
 </section>
 
 <section id="simulador">
@@ -63,9 +73,10 @@
   <p class="instrucao">
     Escolha uma prática agrícola e clique em <b>Adicionar decisão</b>.
   </p>
+
   <p class="instrucao" style="font-size: 0.9em;">
-  💡 Dica: pode clicar várias vezes em <b>Adicionar decisão</b> pra testar diferentes escolhas e ver o que acontece :)
-</p>
+    💡 Dica: pode clicar várias vezes em <b>Adicionar decisão</b> pra testar diferentes escolhas e ver o que acontece :)
+  </p>
 
   <!-- select = caixinha de seleção -->
   <label for="pratica"><b>Selecione:</b></label>
@@ -114,41 +125,42 @@
 </section>
 
 <section id="desafio">
-    <h2>🧠 Desafio Agro Sustentável</h2>
+  <h2>🧠 Desafio Agro Sustentável</h2>
 
-    <!-- pequeno texto explicando o quiz -->
-    <p>Teste os seus conhecimentos sobre o equilíbrio entre a alta produção agrícola e a preservação do meio ambiente!</p>
-    
-    <!-- caixinha do quiz -->
-    <div class="conteudo-box" style="margin: 0 auto;">
-        
-        <!-- pergunta -->
-        <p id="pergunta">
-          <b>Pergunta:</b> Qual destas práticas agrícolas ajuda a preservar o solo e a reter água sem o uso de químicos nocivos?
-        </p>
-        
-        <!-- botões das respostas -->
-        <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
-            
-            <!-- false = resposta errada -->
-            <button onclick="verificarResposta(false)">
-              A) Uso intensivo de fertilizantes sintéticos
-            </button>
+  <!-- pequeno texto explicando o quiz -->
+  <p>Teste os seus conhecimentos sobre o equilíbrio entre a alta produção agrícola e a preservação do meio ambiente!</p>
 
-            <!-- true = resposta certa -->
-            <button onclick="verificarResposta(true)">
-              B) Rotação de culturas e adubação orgânica
-            </button>
+  <!-- caixinha do quiz -->
+  <div class="conteudo-box" style="margin: 0 auto;">
 
-            <!-- errada também -->
-            <button onclick="verificarResposta(false)">
-              C) Monocultura em larga escala sem descanso da terra
-            </button>
-        </div>
-        
-        <!-- aqui aparece se acertou ou errou -->
-        <p id="resultado-quiz" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></p>
+    <!-- pergunta -->
+    <p id="pergunta">
+      <b>Pergunta:</b> Qual destas práticas agrícolas ajuda a preservar o solo e a reter água sem o uso de químicos nocivos?
+    </p>
+
+    <!-- botões das respostas -->
+    <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+
+      <!-- false = resposta errada -->
+      <button onclick="verificarResposta(false)">
+        A) Uso intensivo de fertilizantes sintéticos
+      </button>
+
+      <!-- true = resposta certa -->
+      <button onclick="verificarResposta(true)">
+        B) Rotação de culturas e adubação orgânica
+      </button>
+
+      <!-- errada também -->
+      <button onclick="verificarResposta(false)">
+        C) Monocultura em larga escala sem descanso da terra
+      </button>
+
     </div>
+
+    <!-- aqui aparece se acertou ou errou -->
+    <p id="resultado-quiz" style="margin-top: 15px; font-weight: bold; min-height: 24px;"></p>
+  </div>
 </section>
 
 </main>
