@@ -306,3 +306,19 @@ footer {
     max-width: 100%;
   }
 }
+/* ==========================
+   FIX DARK MODE NA PÁGINA DETALHE
+========================== */
+.dark-mode .conteudo-box {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark-mode .conteudo-box p,
+.dark-mode .conteudo-box h2,
+.dark-mode .conteudo-box b {
+  color: white;
+}
+.dark-mode .conteudo-box img {
+  filter: brightness(0.9);
+}
