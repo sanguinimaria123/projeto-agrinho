@@ -1,12 +1,15 @@
+
 body {
   margin: 0;
   font-family: Arial;
 
-  /* espaço estrutural para não ficar atrás do header fixo */
+  /* espaço estrutural para o header fixo */
   padding-top: 120px;
 }
 
-/* HEADER FIXO */
+/* ==========================
+   HEADER FIXO
+========================== */
 header {
   position: fixed;
   top: 0;
@@ -42,15 +45,17 @@ nav a {
   right: 50px;
 }
 
-/* SCROLL DE ÂNCORAS (CORREÇÃO PRINCIPAL) */
+/* ==========================
+   SCROLL CORRETO (ÂNCORAS)
+========================== */
 section {
   padding: 40px 40px 60px;
-
-  /* evita que o título fique escondido atrás do header */
   scroll-margin-top: 140px;
 }
 
-/* CARDS */
+/* ==========================
+   CARDS DA HOME
+========================== */
 .cards {
   display: flex;
   gap: 20px;
@@ -58,7 +63,6 @@ section {
   justify-content: center;
 }
 
-/* CARD MELHORADO (UX MOBILE + DESKTOP) */
 .card {
   text-decoration: none;
   color: inherit;
@@ -85,12 +89,10 @@ section {
   box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
-/* FEEDBACK TOQUE MOBILE */
 .card:active {
   transform: scale(0.97);
 }
 
-/* ÍCONE INDICANDO QUE É CLICÁVEL */
 .card::after {
   content: "›";
   position: absolute;
@@ -100,7 +102,6 @@ section {
   opacity: 0.5;
 }
 
-/* TEXTO "VER MAIS" */
 .card-cta {
   display: inline-block;
   margin-top: 10px;
@@ -109,14 +110,15 @@ section {
   font-size: 14px;
 }
 
-/* IMAGEM DOS CARDS */
 .card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
 }
 
-/* BOTÕES */
+/* ==========================
+   BOTÕES
+========================== */
 button {
   padding: 10px;
   margin: 5px;
@@ -130,7 +132,9 @@ button {
   background: gray;
 }
 
-/* BARRA */
+/* ==========================
+   BARRA DE PROGRESSO
+========================== */
 .barra {
   width: 100%;
   height: 30px;
@@ -143,14 +147,18 @@ button {
   background: green;
 }
 
-/* CANVAS */
+/* ==========================
+   GRÁFICO
+========================== */
 canvas {
   background: #fafafa;
   border: 1px solid #ccc;
   max-width: 100%;
 }
 
-/* FOOTER */
+/* ==========================
+   FOOTER
+========================== */
 footer {
   text-align: center;
   padding: 25px;
@@ -159,7 +167,9 @@ footer {
   font-size: 14px;
 }
 
-/* DARK MODE */
+/* ==========================
+   DARK MODE
+========================== */
 .dark-mode {
   background: #121212;
   color: white;
@@ -181,7 +191,9 @@ footer {
   background: #0d1f0f;
 }
 
-/* DETALHE */
+/* ==========================
+   PÁGINA DETALHE (IMPORTANTE)
+========================== */
 .pagina-detalhe {
   display: flex;
   justify-content: center;
@@ -192,22 +204,47 @@ footer {
 .conteudo-box {
   max-width: 800px;
   background: white;
+
   padding: 30px;
   border-radius: 15px;
+
   text-align: center;
+
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 /* ==========================
-   RESPONSIVIDADE CELULAR
+   IMAGEM DETALHE (CORREÇÃO GLOBAL)
+========================== */
+.img-detalhe {
+  width: 100%;
+  max-width: 450px;
+
+  height: auto;
+
+  display: block;
+  margin: 0 auto 20px auto;
+
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+
+  transition: transform 0.3s ease;
+}
+
+.img-detalhe:hover {
+  transform: scale(1.02);
+}
+
+/* ==========================
+   RESPONSIVIDADE
 ========================== */
 @media (max-width: 768px) {
 
-  /* header menor no mobile (corrige altura excessiva) */
   header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+
     padding: 10px 15px;
   }
 
@@ -237,8 +274,6 @@ footer {
 
   section {
     padding: 25px 15px;
-
-    /* correção do corte do título no mobile */
     scroll-margin-top: 180px;
   }
 
@@ -264,5 +299,10 @@ footer {
   button {
     width: 100%;
     max-width: 300px;
+  }
+
+  /* imagem também responsiva no mobile */
+  .img-detalhe {
+    max-width: 100%;
   }
 }
